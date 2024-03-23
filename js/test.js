@@ -84,3 +84,99 @@
 
 // const okName = students.findIndex((student) => student.name === "Манго");
 // console.log(okName);
+
+/*======================THIS===================*/
+
+// const polina = {
+//   username: "Polina",
+
+//   showName() {
+//     console.log(this.username);
+//   },
+// };
+// polina.showName();
+
+// ===============CALL===================
+
+// function greetGuest(greeting) {
+//   console.log(`${greeting}, ${this.username} у наш готель ${this.hotel}.`);
+// }
+
+// const mango = {
+//   username: "Манго",
+//   hotel: "Plaza",
+// };
+// const poly = {
+//   username: "Полі",
+//   hotel: "Delfin",
+// };
+
+// greetGuest.call(mango, "Ласкаво просимо");
+// greetGuest.call(poly, "З прибуттям");
+
+// ==================BIND================
+// function greet(clientName) {
+//   return `${clientName}, ласкаво просимо в «${this.service}».`;
+// }
+
+// const steam = {
+//   service: "Steam",
+// };
+// const steamGreeter = greet.bind(steam);
+// console.log(steamGreeter("Манго"));
+
+// const gmail = {
+//   service: "Gmail",
+// };
+// const gmailGreeter = greet.bind(gmail);
+// console.log(gmailGreeter("Полі"));
+
+// =====CALLBACK BIND=============
+
+// const customer = {
+//   firstName: "Jacob",
+//   lastName: "Mercer",
+//   getFullName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   },
+// };
+
+// function makeMessage(callback) {
+//   callback();
+//   console.log(`Обробляємо заявку від ${callback()}.`);
+// }
+
+// makeMessage(customer.getFullName.bind(customer));
+
+// const saveBtn = document.querySelector(".btn");
+
+// const handleBtn = (event) => {
+//   console.log(event);
+// };
+// saveBtn.addEventListener("click", handleBtn);
+// const registerForm = document.querySelector(".form");
+
+// registerForm.addEventListener("submit", handleSubmit);
+
+// function handleSubmit(event) {
+//   event.preventDefault();
+//   const form = event.target;
+//   const login = form.elements.login.value;
+//   const password = form.elements.password.value;
+
+//   if (login === "" || password === "") {
+//     return console.log("Please fill in all the fields!");
+//   }
+
+//   console.log(`Login: ${login}, Password: ${password}`);
+//   form.reset();
+// }
+
+// const textInput = document.querySelector(".text-input");
+// const output = document.querySelector(".output");
+
+// const handleInput = (event) => {
+//   output.textContent = event.currentTarget.value;
+// };
+
+// textInput.addEventListener("input", handleInput);
